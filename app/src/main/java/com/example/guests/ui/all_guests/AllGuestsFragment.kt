@@ -21,7 +21,7 @@ class AllGuestsFragment : Fragment() {
     ): View? {
         allGuestsViewModel =
                 ViewModelProvider(this).get(AllGuestsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
+        val root = inflater.inflate(R.layout.fragment_all_guests, container, false)
         val textView: TextView = root.findViewById(R.id.text_home)
         allGuestsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
