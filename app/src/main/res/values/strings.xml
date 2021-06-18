@@ -10,4 +10,9 @@
     <string name="menu_all_guests">Todos</string>
     <string name="menu_presents">Presentes</string>
     <string name="menu_absents">Ausentes</string>
+    <string name="name">Nome</string>
+    <string name="present">Presente</string>
+    <string name="absent">Ausente</string>
+    <string name="presence_confirmation">Confirmação de presença</string>
+    <string name="save">Salvar</string>
 </resources>
