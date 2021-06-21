@@ -20,24 +20,26 @@ class GuestFormActivity : AppCompatActivity() {
 
         mViewModel = ViewModelProvider(this).get(GuestFormViewModel::class.java)
 
-        setListeners()
+        binding.buttonSaveGuestsData.setOnClickListener { setListeners() }
         observeGuest()
     }
 
     private fun setListeners() {
 
-        val name = binding.nameGuest.text.toString()
+        val name = binding.inputName.text.toString()
         val presence = binding.presence.isChecked
 
-        binding.buttonSaveGuestsData.setOnClickListener { mViewModel.saveDataGuest(name, presence) }
+        mViewModel.saveDataGuest(name, presence)
     }
 
     private fun observeGuest() {
         mViewModel.saveGuest.observe(this, Observer {
             if (it) {
-                Toast.makeText(applicationContext, "Sucess", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Success", Toast.LENGTH_SHORT).show()
+                finish()
             } else {
                 Toast.makeText(applicationContext, "Failed", Toast.LENGTH_SHORT).show()
+                finish()
             }
         })
     }
