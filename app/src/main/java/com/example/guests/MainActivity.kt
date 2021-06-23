@@ -3,24 +3,27 @@ package com.example.guests
 import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.guests.databinding.ActivityMainBinding
 import com.example.guests.ui.guests.GuestFormActivity
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        val view = binding.root
+        setContentView(view)
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -29,17 +32,13 @@ class MainActivity : AppCompatActivity() {
         val floatingActionButton: FloatingActionButton = findViewById(R.id.floating_action_button)
         floatingActionButton.setOnClickListener {
             startActivity(Intent(applicationContext, GuestFormActivity::class.java))
-
-               /* view -> Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()*/
         }
 
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
-        val navView: NavigationView = findViewById(R.id.nav_view)
+        val drawerLayout = binding.drawerLayout
+        val navView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment)
 
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+        //passa cada id de fragment para ser considerado como destino
         appBarConfiguration = AppBarConfiguration(setOf(
                 R.id.nav_all, R.id.nav_presents, R.id.nav_absents), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -48,7 +47,6 @@ class MainActivity : AppCompatActivity() {
 
     //cria menu settings
 //    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-//        // Inflate the menu; this adds items to the action bar if it is present.
 //        menuInflater.inflate(R.menu.main, menu)
 //        return true
 //    }
