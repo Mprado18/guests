@@ -11,14 +11,14 @@ class GuestDataBaseHelper(context: Context) : SQLiteOpenHelper(
         null,
         DATABASE_VERSION) {
 
+    //cria banco de dados
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(CREATE_TABLE_GUEST)
     }
 
-    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {}
 
-    }
-
+    //cria tabela do banco de dados
     companion object {
         private const val DATABASE_VERSION = 1
         private const val DATABASE_NAME = "Guests.db"
