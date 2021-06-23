@@ -15,4 +15,13 @@
     <string name="absent">Ausente</string>
     <string name="presence_confirmation">Confirmação de presença</string>
     <string name="save">Salvar</string>
+    <string name="guest_register">Cadastro de convidados</string>
+    <string name="all_guests">Todos convidados</string>
+    <string name="no_confirmed">Não confirmado</string>
+    <string name="cancel">Cancelar</string>
+    <string name="remove_guest">Remoção de convidado</string>
+    <string name="want_to_remove">Deseja remover convidado da lista?</string>
+    <string name="remove">Remover</string>
+    <string name="successfully_removed">Convidado removido com sucesso.</string>
+    <string name="total">Total</string>
 </resources>
