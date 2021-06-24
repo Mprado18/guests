@@ -2,8 +2,7 @@
     <string name="app_name">Guests</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">App Convidados</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -24,4 +23,6 @@
     <string name="remove">Remover</string>
     <string name="successfully_removed">Convidado removido com sucesso.</string>
     <string name="total">Total</string>
+    <string name="present_guests">Convidados presentes</string>
+    <string name="absent_guests">Convidados ausentes</string>
 </resources>
