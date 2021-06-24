@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="guest_item">
+        <item name="android:padding">@dimen/internal_padding</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="line_separator">
+        <item name="android:background">@color/light_gray</item>
+    </style>
+
+    <style name="mini_line">
+        <item name="android:background">@color/dark_blue</item>
+    </style>
+
+    <style name="text_title">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:padding">@dimen/internal_padding</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="floating_action_button">
+        <item name="android:backgroundTint">@color/black</item>
+    </style>
+</resources>
